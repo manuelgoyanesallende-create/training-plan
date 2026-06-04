@@ -546,7 +546,7 @@
     <div class="week-grid">
       <div class="day-card type-lift selected" onclick="selectDay('mon')">
         <div class="day-name">Mon</div>
-        <div class="day-title">Pull & Legs</div>
+        <div class="day-title">Pull</div>
         <div class="day-badge">Lift</div>
       </div>
       <div class="day-card type-erg" onclick="selectDay('tue')">
@@ -561,7 +561,7 @@
       </div>
       <div class="day-card type-lift" onclick="selectDay('thu')">
         <div class="day-name">Thu</div>
-        <div class="day-title">Push & Core</div>
+        <div class="day-title">Push</div>
         <div class="day-badge">Lift</div>
       </div>
       <div class="day-card type-erg" onclick="selectDay('fri')">
@@ -574,10 +574,10 @@
         <div class="day-title">Hyrox Class</div>
         <div class="day-badge">Hyrox</div>
       </div>
-      <div class="day-card type-rest" onclick="selectDay('sun')">
+      <div class="day-card type-lift" onclick="selectDay('sun')">
         <div class="day-name">Sun</div>
-        <div class="day-title">Full Rest</div>
-        <div class="day-badge">Rest</div>
+        <div class="day-title">Legs & Core</div>
+        <div class="day-badge">Lift</div>
       </div>
     </div>
 
@@ -590,19 +590,19 @@
 <!-- NUTRITION PAGE -->
 <div id="page-nutrition" class="page">
   <div class="page-title">Nutrition Plan</div>
-  <p class="page-desc">Two meals a day, dialled in for recomp — lose fat, build muscle.</p>
+  <p class="page-desc">Two meals a day, dialled in for recomp — lose fat, build muscle. Based on ~78kg bodyweight.</p>
 
   <div class="macro-strip">
     <div class="macro-card">
-      <div class="macro-value">2g</div>
-      <div class="macro-label">Protein / kg BW</div>
+      <div class="macro-value">155g</div>
+      <div class="macro-label">Protein Daily</div>
     </div>
     <div class="macro-card">
       <div class="macro-value">2</div>
       <div class="macro-label">Meals Per Day</div>
     </div>
     <div class="macro-card">
-      <div class="macro-value">↓</div>
+      <div class="macro-value">↓~</div>
       <div class="macro-label">Slight deficit</div>
     </div>
   </div>
@@ -612,78 +612,94 @@
       <div class="meal-time">Morning — Biggest Meal</div>
       <div class="meal-title">Breakfast</div>
       <div class="meal-items">
-        <div class="meal-item">3–4 eggs (scrambled or poached)</div>
-        <div class="meal-item">Smoked salmon or lean meat</div>
+        <div class="meal-item">4 eggs (scrambled or poached)</div>
+        <div class="meal-item">Smoked salmon or chicken breast</div>
         <div class="meal-item">Sourdough or wholegrain toast</div>
         <div class="meal-item">Half an avocado</div>
-        <div class="meal-item">Greek yogurt with berries</div>
+        <div class="meal-item">Greek yogurt (high protein) with berries</div>
+        <div class="meal-item">Optional: protein shake if short on target</div>
       </div>
     </div>
     <div class="meal-card">
       <div class="meal-time">Midday — Recovery Meal</div>
       <div class="meal-title">Lunch</div>
       <div class="meal-items">
-        <div class="meal-item">Grilled chicken thighs or beef</div>
+        <div class="meal-item">Large portion chicken thighs, beef or tuna</div>
         <div class="meal-item">Rice, sweet potato, or pasta</div>
         <div class="meal-item">Roasted veg with olive oil</div>
         <div class="meal-item">Handful of nuts or cheese</div>
-        <div class="meal-item">Cottage cheese or tuna option</div>
+        <div class="meal-item">Cottage cheese as a side if needed</div>
       </div>
     </div>
   </div>
 
   <hr class="divider">
 
-  <div class="page-title" style="font-size:1.3rem;">Key Rules</div>
-
-  <div class="tips-grid">
-    <div class="tip-card">
-      <div class="tip-icon">🥩</div>
-      <div class="tip-title">Protein First</div>
-      <div class="tip-body">Hit 2g per kg of bodyweight every day — training day or not. If you're falling short, add a protein shake to breakfast.</div>
-    </div>
+  <div class="page-title" style="font-size:1.3rem;">Calories By Day Type</div>
+  <div class="tips-grid" style="margin-bottom:1.5rem;">
     <div class="tip-card">
       <div class="tip-icon">🏋️</div>
-      <div class="tip-title">Train Day Calories</div>
-      <div class="tip-body">Eat more on lifting and Hyrox days — bigger breakfast, generous lunch. Don't undereat when you're training hard.</div>
+      <div class="tip-title">Lifting Days (Mon, Thu, Sun)</div>
+      <div class="tip-body">Slight calorie deficit. Protein stays at 155g. Moderate carbs at both meals. These sessions build muscle — don't undereat.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🚣</div>
+      <div class="tip-title">Erg Days (Tue, Fri)</div>
+      <div class="tip-body">Close to maintenance. Higher carbs at breakfast to fuel the session. Tuesday is easy so less fuel needed than Friday intervals.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🔥</div>
+      <div class="tip-title">Hyrox Days (Wed, Sat)</div>
+      <div class="tip-body">At or slightly above maintenance. Biggest breakfast of the week — carbs and protein both up. You're burning a lot in class.</div>
     </div>
     <div class="tip-card">
       <div class="tip-icon">💧</div>
       <div class="tip-title">Between Meals</div>
-      <div class="tip-body">Black coffee, water, and sparkling water are your best friends. They suppress appetite without adding calories.</div>
+      <div class="tip-body">Black coffee, water, and sparkling water keep hunger in check. Aim for 2.5–3L of water on training days.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="page-title" style="font-size:1.3rem;">Key Rules</div>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">🥩</div>
+      <div class="tip-title">Protein Every Day</div>
+      <div class="tip-body">155g daily is non-negotiable — training day or not. Split roughly 80g breakfast, 75g lunch. Greek yogurt and eggs at breakfast get you there fast.</div>
     </div>
     <div class="tip-card">
       <div class="tip-icon">😴</div>
-      <div class="tip-title">Rest Days</div>
-      <div class="tip-body">Eat a little less naturally on rest days — your hunger will guide you. Don't force it either way.</div>
+      <div class="tip-title">Sleep = Gains</div>
+      <div class="tip-body">At 6 training days, sleep is as important as the sessions themselves. 7–9 hours. Muscle is built at rest, not in the gym.</div>
     </div>
   </div>
 </div>
 
 <!-- PROGRESS PAGE -->
 <div id="page-progress" class="page">
-  <div class="page-title">8-Week Progression</div>
-  <p class="page-desc">Your roadmap from day one to peak week.</p>
+  <div class="page-title">16-Week Progression</div>
+  <p class="page-desc">Four phases across 16 weeks — from foundation to peak performance.</p>
 
   <div class="week-blocks">
     <div class="week-block">
-      <div class="week-num">Weeks 1–2</div>
-      <div class="week-focus">Learn the erg stroke, establish lifting baseline, survive Hyrox</div>
+      <div class="week-num">Phase 1 — Weeks 1–4</div>
+      <div class="week-focus">Foundation. Learn erg technique, establish lifting baseline, get used to 6 days. Don't push intensity yet.</div>
       <div class="week-bar"><div class="week-bar-fill" style="width:25%"></div></div>
     </div>
     <div class="week-block">
-      <div class="week-num">Weeks 3–4</div>
-      <div class="week-focus">Add weight to lifts weekly, push erg intervals harder</div>
+      <div class="week-num">Phase 2 — Weeks 5–8</div>
+      <div class="week-focus">Build. Add 2.5kg to main lifts weekly. Push erg intervals harder. Start tracking 500m split times.</div>
       <div class="week-bar"><div class="week-bar-fill" style="width:50%"></div></div>
     </div>
     <div class="week-block">
-      <div class="week-num">Weeks 5–6</div>
-      <div class="week-focus">Increase interval volume, hit PRs on main lifts</div>
+      <div class="week-num">Phase 3 — Weeks 9–12</div>
+      <div class="week-focus">Strength peak. Hit PRs on cable rows, leg press, overhead press. Add interval reps on the erg. Hyrox times improving.</div>
       <div class="week-bar"><div class="week-bar-fill" style="width:75%"></div></div>
     </div>
     <div class="week-block">
-      <div class="week-num">Weeks 7–8</div>
-      <div class="week-focus">Peak then deload — drop volume 40%, keep intensity</div>
+      <div class="week-num">Phase 4 — Weeks 13–16</div>
+      <div class="week-focus">Peak then deload. Weeks 13–15 push everything. Week 16: drop volume 40%, keep intensity. Reassess and reset.</div>
       <div class="week-bar"><div class="week-bar-fill" style="width:100%"></div></div>
     </div>
   </div>
@@ -693,14 +709,15 @@
   <div class="progress-title">Hyrox Synergy Tips</div>
 
   <div class="hyrox-info">
-    <p>🚣 <strong>Ski Erg</strong> — Your erg sessions directly improve this station. Same muscles, same rhythm.</p><br>
-    <p>🛷 <strong>Sled Push/Pull</strong> — Gets easier as your deadlift goes up. Don't skip Monday's leg work.</p><br>
-    <p>⚡ <strong>Manage fatigue honestly.</strong> Six days is a lot. If Thursday or Friday feels empty, make the erg session purely easy — no intervals. Listen to your body week to week.</p><br>
-    <p>😴 <strong>Sleep and protein</strong> become even more critical at 6 days. Hit your protein target every day, not just training days.</p>
+    <p>🚣 <strong>Ski Erg</strong> — Tuesday and Friday erg sessions directly build this station. Same lat and back engagement, same rhythm. You'll feel it improving week by week.</p><br>
+    <p>🛷 <strong>Sled Push/Pull</strong> — Gets easier as your Sunday leg press and leg curl numbers go up. Don't skip legs.</p><br>
+    <p>💪 <strong>Farmers Carry & Sandbag</strong> — Monday pull session builds the grip and back endurance these stations demand. Face pulls keep your shoulders healthy under load.</p><br>
+    <p>⚡ <strong>Manage fatigue across the week.</strong> Wednesday Hyrox sits between Monday pull and Thursday push — arrive fresh. Friday erg is your last hard session before Saturday Hyrox — if your legs are empty, do easy steady state instead of intervals.</p><br>
+    <p>😴 <strong>Sleep and protein</strong> are your recovery tools at 6 days. 155g protein daily, 7–9 hours sleep. These matter more than any individual exercise swap.</p>
   </div>
 
   <div class="info-block" style="margin-top: 1.5rem;">
-    Erg goal: drop your 500m split by 1–2 seconds every few weeks. Lifting goal: add 2.5kg to main lifts each week. Small, consistent progress beats big leaps.
+    Erg goal: drop your 500m split by 1–2 seconds every 2 weeks. Lifting goal: add 2.5kg to cable rows, leg press and overhead press each week during Phase 2. Small consistent progress over 16 weeks compounds massively.
   </div>
 </div>
 
@@ -708,18 +725,19 @@
 const days = {
   mon: {
     name: 'Monday',
-    title: 'Pull & Legs',
+    title: 'Pull',
     type: 'lift',
     badge: 'badge-lift',
     badgeText: 'Strength',
-    sub: 'Posterior chain focus — the engine of rowing',
+    sub: 'Back, lats & biceps — the engine of rowing',
     exercises: [
-      { name: 'Deadlift', sets: '4 × 5', note: '' },
-      { name: 'Barbell / Cable Row', sets: '4 × 8', note: '' },
-      { name: 'Pull-ups', sets: '3 × 8–10', note: '' },
-      { name: 'Romanian Deadlift', sets: '3 × 10', note: '' },
+      { name: 'Cable Row (wide grip)', sets: '4 × 8', note: '' },
+      { name: 'Cable Row (narrow grip)', sets: '4 × 10', note: '' },
+      { name: 'Lat Pulldown (wide grip)', sets: '4 × 10', note: '' },
+      { name: 'Seated Dumbbell Curl', sets: '3 × 12', note: '' },
+      { name: 'Cable Curl', sets: '3 × 12', note: '' },
+      { name: 'Preacher Curl', sets: '3 × 12', note: '' },
       { name: 'Face Pulls', sets: '3 × 15', note: '' },
-      { name: 'Plank', sets: '3 × 45 sec', note: '' },
     ]
   },
   tue: {
@@ -749,18 +767,21 @@ const days = {
   },
   thu: {
     name: 'Thursday',
-    title: 'Push & Core',
+    title: 'Push',
     type: 'lift',
     badge: 'badge-lift',
     badgeText: 'Strength',
-    sub: 'Posture, shoulder health, pressing strength',
+    sub: 'Chest, shoulders & triceps',
     exercises: [
       { name: 'Overhead Press', sets: '4 × 6', note: '' },
       { name: 'Incline Dumbbell Press', sets: '3 × 10', note: '' },
+      { name: 'Seated Chest Press (Machine)', sets: '3 × 10', note: '' },
+      { name: 'Pec Deck (Butterfly Machine)', sets: '3 × 12', note: '' },
+      { name: 'Chest Fly (cable or dumbbell)', sets: '3 × 12', note: '' },
       { name: 'Single-arm Dumbbell Row', sets: '3 × 10 each', note: '' },
-      { name: 'Cable Pull-aparts', sets: '3 × 20', note: '' },
-      { name: 'Hanging Leg Raises', sets: '3 × 12', note: '' },
-      { name: 'Side Plank', sets: '3 × 30 sec each', note: '' },
+      { name: 'Straight-arm Pulldown', sets: '3 × 12', note: '' },
+      { name: 'Tricep Rope Pushdown', sets: '3 × 12', note: '' },
+      { name: 'Hammer Curls', sets: '3 × 12', note: '' },
     ]
   },
   fri: {
@@ -792,13 +813,22 @@ const days = {
   },
   sun: {
     name: 'Sunday',
-    title: 'Full Rest',
-    type: 'rest',
-    badge: 'badge-rest',
-    badgeText: 'Rest',
-    sub: 'Non-negotiable — you\'re doing a lot',
-    exercises: [],
-    tip: 'This is when your body actually builds muscle and recovers. Walk, stretch, sleep well. Eat your protein. The gains happen here.'
+    title: 'Legs & Core',
+    type: 'lift',
+    badge: 'badge-lift',
+    badgeText: 'Strength',
+    sub: 'Moderate legs with core finisher',
+    exercises: [
+      { name: 'Leg Press', sets: '4 × 8', note: '' },
+      { name: 'Leg Curl (machine)', sets: '3 × 12', note: '' },
+      { name: 'Leg Extension (machine)', sets: '3 × 12', note: '' },
+      { name: 'Hip Abductor Machine', sets: '3 × 15', note: '' },
+      { name: 'Calf Raises (machine)', sets: '4 × 15', note: '' },
+      { name: 'Side Plank', sets: '3 × 30 sec each', note: '' },
+      { name: 'Hanging Leg Raises', sets: '3 × 12', note: '' },
+      { name: 'Ab Wheel', sets: '3 × 10', note: '' },
+    ],
+    tip: 'Legs on Sunday means Monday pull session is fully fresh. Keep leg press weight moderate — you\'re not maxing out the day before a full week of training.'
   }
 };
 
