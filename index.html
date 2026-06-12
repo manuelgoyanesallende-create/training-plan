@@ -538,21 +538,21 @@
 <div id="page-schedule" class="page active">
   <div class="hero">
     <div class="hero-label">Your training plan</div>
-    <h1>6-DAY<br><span>PROGRAMME</span></h1>
-    <p class="hero-sub">Rower physique + Hyrox conditioning + Lifting. Tap any day for your full session.</p>
+    <h1>7-DAY<br><span>PROGRAMME</span></h1>
+    <p class="hero-sub">Rower physique + Hyrox 3x + Lifting + Running. Tap any day for your full session.</p>
   </div>
 
   <div style="max-width:900px; margin: 0 auto; padding: 0 2rem 2rem;">
     <div class="week-grid">
-      <div class="day-card type-lift selected" onclick="selectDay('mon')">
+      <div class="day-card type-hyrox selected" onclick="selectDay('mon')">
         <div class="day-name">Mon</div>
+        <div class="day-title">Hyrox Class</div>
+        <div class="day-badge">Hyrox</div>
+      </div>
+      <div class="day-card type-lift" onclick="selectDay('tue')">
+        <div class="day-name">Tue</div>
         <div class="day-title">Pull</div>
         <div class="day-badge">Lift</div>
-      </div>
-      <div class="day-card type-erg" onclick="selectDay('tue')">
-        <div class="day-name">Tue</div>
-        <div class="day-title">Steady State</div>
-        <div class="day-badge">Erg</div>
       </div>
       <div class="day-card type-hyrox" onclick="selectDay('wed')">
         <div class="day-name">Wed</div>
@@ -574,10 +574,10 @@
         <div class="day-title">Hyrox Class</div>
         <div class="day-badge">Hyrox</div>
       </div>
-      <div class="day-card type-lift" onclick="selectDay('sun')">
+      <div class="day-card type-erg" onclick="selectDay('sun')">
         <div class="day-name">Sun</div>
-        <div class="day-title">Legs & Core</div>
-        <div class="day-badge">Lift</div>
+        <div class="day-title">Easy Run</div>
+        <div class="day-badge">Run</div>
       </div>
     </div>
 
@@ -639,23 +639,23 @@
   <div class="tips-grid" style="margin-bottom:1.5rem;">
     <div class="tip-card">
       <div class="tip-icon">🏋️</div>
-      <div class="tip-title">Lifting Days (Mon, Thu, Sun)</div>
+      <div class="tip-title">Lifting Days (Tue, Thu)</div>
       <div class="tip-body">Slight calorie deficit. Protein stays at 155g. Moderate carbs at both meals. These sessions build muscle — don't undereat.</div>
     </div>
     <div class="tip-card">
       <div class="tip-icon">🚣</div>
-      <div class="tip-title">Erg Days (Tue, Fri)</div>
-      <div class="tip-body">Close to maintenance. Higher carbs at breakfast to fuel the session. Tuesday is easy so less fuel needed than Friday intervals.</div>
+      <div class="tip-title">Erg Day (Fri)</div>
+      <div class="tip-body">Close to maintenance. Higher carbs at breakfast to fuel the session. If doing hard intervals, eat a bigger lunch too.</div>
     </div>
     <div class="tip-card">
       <div class="tip-icon">🔥</div>
-      <div class="tip-title">Hyrox Days (Wed, Sat)</div>
-      <div class="tip-body">At or slightly above maintenance. Biggest breakfast of the week — carbs and protein both up. You're burning a lot in class.</div>
+      <div class="tip-title">Hyrox Days (Mon, Wed, Sat)</div>
+      <div class="tip-body">At or slightly above maintenance. Biggest breakfast of the week — carbs and protein both up. Three classes a week burns serious calories.</div>
     </div>
     <div class="tip-card">
-      <div class="tip-icon">💧</div>
-      <div class="tip-title">Between Meals</div>
-      <div class="tip-body">Black coffee, water, and sparkling water keep hunger in check. Aim for 2.5–3L of water on training days.</div>
+      <div class="tip-icon">🏃</div>
+      <div class="tip-title">Run Day (Sun)</div>
+      <div class="tip-body">Close to maintenance. Good carbs at breakfast before the run. As your long runs grow past 60 min, treat Sunday like a Hyrox day for calories.</div>
     </div>
   </div>
 
@@ -671,7 +671,7 @@
     <div class="tip-card">
       <div class="tip-icon">😴</div>
       <div class="tip-title">Sleep = Gains</div>
-      <div class="tip-body">At 6 training days, sleep is as important as the sessions themselves. 7–9 hours. Muscle is built at rest, not in the gym.</div>
+      <div class="tip-body">At 7 training days, sleep is as important as the sessions themselves. 7–9 hours. Muscle is built at rest, not in the gym.</div>
     </div>
   </div>
 </div>
@@ -725,6 +725,16 @@
 const days = {
   mon: {
     name: 'Monday',
+    title: 'Hyrox Class',
+    type: 'hyrox',
+    badge: 'badge-hyrox',
+    badgeText: 'Hyrox',
+    sub: 'Show up fresh — give everything in class',
+    exercises: [],
+    tip: 'First Hyrox of the week. No pre-session work needed. Your lifting and erg work is directly building your performance here.'
+  },
+  tue: {
+    name: 'Tuesday',
     title: 'Pull',
     type: 'lift',
     badge: 'badge-lift',
@@ -740,30 +750,15 @@ const days = {
       { name: 'Face Pulls', sets: '3 × 15', note: '' },
     ]
   },
-  tue: {
-    name: 'Tuesday',
-    title: 'Steady State Erg',
-    type: 'erg',
-    badge: 'badge-erg',
-    badgeText: 'Cardio',
-    sub: 'Active recovery — build your aerobic base',
-    exercises: [
-      { name: 'Easy warm-up', sets: '5 min', note: '' },
-      { name: 'Steady rowing', sets: '35–40 min', note: '' },
-      { name: 'Rate', sets: '18–22 spm', note: '' },
-      { name: 'Effort', sets: 'Conversational pace', note: '' },
-    ],
-    tip: 'Technique: legs → body swing → arms on the drive. Arms → body → legs on the recovery. Focus here, not speed.'
-  },
   wed: {
     name: 'Wednesday',
     title: 'Hyrox Class',
     type: 'hyrox',
     badge: 'badge-hyrox',
     badgeText: 'Hyrox',
-    sub: 'Leave it all in the class — no pre-session needed',
+    sub: 'Second hit of the week — stay strong',
     exercises: [],
-    tip: 'Don\'t exhaust yourself before class. Show up fresh, give it everything. Your erg and lifting work is directly building your Hyrox performance.'
+    tip: 'Tuesday\'s pull session shouldn\'t leave your legs heavy — you\'re ready for this. Give it everything.'
   },
   thu: {
     name: 'Thursday',
@@ -799,7 +794,7 @@ const days = {
       { name: '4 min hard / 3 min easy', sets: '4 rounds', note: '' },
       { name: 'Cool-down', sets: '5 min', note: '' },
     ],
-    tip: 'If your legs are empty after Thursday, do the easier option. Tomorrow is Hyrox — don\'t arrive shattered.'
+    tip: 'Tomorrow is Hyrox — if your legs are empty, do easy steady state instead of intervals. Don\'t arrive at Saturday shattered.'
   },
   sat: {
     name: 'Saturday',
@@ -807,28 +802,23 @@ const days = {
     type: 'hyrox',
     badge: 'badge-hyrox',
     badgeText: 'Hyrox',
-    sub: 'End your week strong — full effort',
+    sub: 'Third and final hit — end the week strong',
     exercises: [],
-    tip: 'Second hit of the week. Trust the training — your fitness is building even when it doesn\'t feel like it.'
+    tip: 'Third Hyrox of the week. Trust the training — your fitness compounds even when it doesn\'t feel like it. Sunday is an easy run so you can push hard today.'
   },
   sun: {
     name: 'Sunday',
-    title: 'Legs & Core',
-    type: 'lift',
-    badge: 'badge-lift',
-    badgeText: 'Strength',
-    sub: 'Moderate legs with core finisher',
+    title: 'Easy Run',
+    type: 'erg',
+    badge: 'badge-erg',
+    badgeText: 'Run',
+    sub: 'Building toward half marathon — keep it easy',
     exercises: [
-      { name: 'Leg Press', sets: '4 × 8', note: '' },
-      { name: 'Leg Curl (machine)', sets: '3 × 12', note: '' },
-      { name: 'Leg Extension (machine)', sets: '3 × 12', note: '' },
-      { name: 'Hip Abductor Machine', sets: '3 × 15', note: '' },
-      { name: 'Calf Raises (machine)', sets: '4 × 15', note: '' },
-      { name: 'Side Plank', sets: '3 × 30 sec each', note: '' },
-      { name: 'Hanging Leg Raises', sets: '3 × 12', note: '' },
-      { name: 'Ab Wheel', sets: '3 × 10', note: '' },
+      { name: 'Walk warm-up', sets: '5 min', note: '' },
+      { name: 'Easy run — conversational pace', sets: '35–45 min', note: '' },
+      { name: 'Walk cool-down', sets: '5 min', note: '' },
     ],
-    tip: 'Legs on Sunday means Monday pull session is fully fresh. Keep leg press weight moderate — you\'re not maxing out the day before a full week of training.'
+    tip: 'Keep it genuinely easy — you should be able to hold a full sentence. This builds your aerobic engine for the half marathon. Progress: add 10–15 min every 3–4 weeks.'
   }
 };
 
